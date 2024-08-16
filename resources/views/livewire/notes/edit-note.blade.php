@@ -26,7 +26,7 @@ new #[Layout('layouts.app')] class extends Component {
     public function mount(Note $note)
     {
         $this->authorize('update', $note);
-        // $this->fill($note);
+        $this->fill($note);
         $this->noteTitle = $note->title;
         $this->noteBody = $note->body;
         $this->noteRecipient = $note->recipient;
